@@ -1,0 +1,116 @@
+.t-section {
+  padding: 80px 24px;
+  background: #f9fafb;
+}
+
+.t-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.t-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.t-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.t-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Marquee rows */
+.t-marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.t-marquee + .t-marquee { margin-top: 20px; }
+
+.t-track {
+  display: inline-flex;
+  gap: 16px;
+  will-change: transform;
+  animation-timing-function: linear;
+}
+
+/* Left scrolling - moves exactly 50% then loops invisibly */
+.t-marquee-a .t-track {
+  animation: t-scroll-left 40s linear infinite;
+  animation-delay: 0s;
+}
+
+/* Right scrolling - moves exactly 50% then loops invisibly */
+.t-marquee-b .t-track {
+  animation: t-scroll-right 45s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes t-scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes t-scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Testimonial card */
+.t-card {
+  flex: 0 0 auto;
+  width: 340px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  white-space: normal;
+}
+
+.t-quote {
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.t-footer { margin-top: 14px; display: flex; gap: 10px; align-items: center; }
+.t-author { display: flex; flex-direction: column; gap: 2px; }
+
+.t-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.t-role {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.t-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+
+/* Pause on hover for better readability */
+.t-marquee:hover .t-track { animation-play-state: paused; }
+
+@media (max-width: 640px) {
+  .t-card { 
+    width: 280px;
+  }
+}
+
+

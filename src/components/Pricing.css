@@ -1,0 +1,297 @@
+.pricing-section {
+  padding: 80px 24px;
+  background: #F8F9FA;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Intro section */
+.pricing-intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pricing-main-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.pricing-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Toggle component */
+.pricing-toggle-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.pricing-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.7rem 1.6rem;
+  border: none;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-toggle-btn:hover {
+  border-color: #2563EB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.pricing-toggle-btn.active {
+  background: #2563EB;
+  color: #fff;
+  border-color: #2563EB;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.pricing-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.pricing-toggle-btn.active .pricing-badge {
+  background: #22c55e;
+  color: #fff;
+}
+
+/* Pricing grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Pricing card */
+.pricing-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Highlighted card (center) */
+.pricing-card-highlighted {
+  background: #111827;
+  border-color: #111827;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card-highlighted .pricing-card-title,
+.pricing-card-highlighted .pricing-card-desc,
+.pricing-card-highlighted .pricing-amount,
+.pricing-card-highlighted .pricing-period,
+.pricing-card-highlighted .pricing-quote,
+.pricing-card-highlighted .pricing-feature {
+  color: #fff;
+}
+
+.pricing-card-highlighted .pricing-check {
+  color: #22c55e;
+}
+
+.pricing-card-highlighted .pricing-card-divider {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Card header */
+.pricing-card-header {
+  margin-bottom: 24px;
+}
+
+.pricing-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.pricing-card-desc {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Price display */
+.pricing-card-price {
+  margin-bottom: 20px;
+}
+
+.pricing-amount {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pricing-period {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.pricing-quote {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+}
+
+/* Divider */
+.pricing-card-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin-bottom: 24px;
+}
+
+/* Features list */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  flex-grow: 1;
+}
+
+.pricing-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.pricing-feature:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-check {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #2563EB;
+}
+
+/* CTA button */
+.pricing-cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.7rem 1.6rem;
+  background: #2563EB;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  margin-top: auto;
+}
+
+.pricing-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card-highlighted .pricing-cta {
+  background: #2563EB;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.pricing-card-highlighted .pricing-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+}
+
+.pricing-btn-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5rem;
+  filter: brightness(0) invert(1);
+  vertical-align: middle;
+}
+
+.pricing-phone-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5rem;
+  stroke: currentColor;
+  vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  .pricing-toggle-wrapper {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pricing-toggle-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-section {
+    padding: 60px 20px;
+  }
+  
+  .pricing-main-title {
+    font-size: 28px;
+  }
+  
+  .pricing-card {
+    padding: 24px;
+  }
+  
+  .pricing-amount {
+    font-size: 36px;
+  }
+}
+
