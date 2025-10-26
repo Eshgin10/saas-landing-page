@@ -68,6 +68,43 @@
   box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
+@media (max-width: 768px) {
+  .pricing-toggle-wrapper {
+    position: relative;
+    gap: 0;
+    padding: 4px;
+    background: #e5edff;
+    border-radius: 999px;
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-toggle-btn {
+    flex: 1;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    color: #2563EB;
+    gap: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .pricing-toggle-btn.active {
+    background: #2563EB;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+  }
+
+  .pricing-toggle-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 .pricing-badge {
   font-size: 12px;
   font-weight: 600;
@@ -262,18 +299,6 @@
     grid-template-columns: 1fr;
     max-width: 480px;
     margin: 0 auto;
-  }
-  
-  .pricing-toggle-wrapper {
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .pricing-toggle-btn {
-    width: 100%;
   }
 }
 

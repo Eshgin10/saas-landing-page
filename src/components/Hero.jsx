@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     // Trigger animation after component mounts
@@ -13,6 +14,8 @@ const Hero = () => {
     }, 100)
     return () => clearTimeout(timer)
   }, [])
+
+  const closeMenu = () => setIsMenuOpen(false)
 
   return (
     <section id="home" className="hero">
@@ -23,21 +26,36 @@ const Hero = () => {
           <div className="hero-logo">
             <a href="#home" className="logo-placeholder">CodeFlow</a>
           </div>
+
+          <button
+            type="button"
+            className={`hero-menu-toggle ${isMenuOpen ? 'open' : ''}`}
+            onClick={() => setIsMenuOpen(prev => !prev)}
+            aria-expanded={isMenuOpen}
+            aria-controls="hero-navigation"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           
-          {/* Navigation menu centered */}
-          <nav className="hero-nav">
-            <a href="#features" className="nav-link">Features</a>
-            <a href="#benefits" className="nav-link">Benefits</a>
-            <a href="#about" className="nav-link">Testimonials</a>
-            <a href="#pricing" className="nav-link">Pricing</a>
-          </nav>
-          
-          {/* CTA button on far right */}
-          <div className="hero-header-cta">
-            <button className="hero-btn hero-btn-primary">
-              Get Started
-              <img src={terminalIcon} alt="Terminal" className="btn-icon" />
-            </button>
+          <div className={`hero-menu ${isMenuOpen ? 'open' : ''}`} id="hero-navigation">
+            {/* Navigation menu centered */}
+            <nav className="hero-nav">
+              <a href="#features" className="nav-link" onClick={closeMenu}>Features</a>
+              <a href="#benefits" className="nav-link" onClick={closeMenu}>Benefits</a>
+              <a href="#about" className="nav-link" onClick={closeMenu}>Testimonials</a>
+              <a href="#pricing" className="nav-link" onClick={closeMenu}>Pricing</a>
+            </nav>
+            
+            {/* CTA button on far right */}
+            <div className="hero-header-cta">
+              <button className="hero-btn hero-btn-primary" onClick={closeMenu}>
+                Get Started
+                <img src={terminalIcon} alt="Terminal" className="btn-icon" />
+              </button>
+            </div>
           </div>
         </div>
       </header>

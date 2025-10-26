@@ -110,3 +110,18 @@ body {
 .animate-header.animate-in {
   animation: fadeInUp 0.6s ease-out forwards;
 }
+
+@media (max-width: 768px) {
+  .animate-item,
+  .animate-item-scale,
+  .animate-header {
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-item.animate-in,
+  .animate-item-scale.animate-in,
+  .animate-header.animate-in {
+    animation-fill-mode: forwards;
+  }
+}

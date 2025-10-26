@@ -214,7 +214,7 @@
 }
 
 /* Scan animation */
-.lb-grid .lb-card:first-child:hover .scan-beam-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .scan-beam-first {
   animation: lb-code-scan 2.2s ease-in-out forwards;
 }
 
@@ -236,23 +236,23 @@
 }
 
 /* Lines glow as scan passes */
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(1) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(1) {
   animation: lb-line-scan-glow 0.5s 0.3s ease-out forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(2) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(2) {
   animation: lb-line-scan-glow 0.5s 0.6s ease-out forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(3) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(3) {
   animation: lb-line-scan-glow 0.5s 0.9s ease-out forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(5) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(5) {
   animation: lb-line-scan-glow 0.5s 1.5s ease-out forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(6) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(6) {
   animation: lb-line-scan-glow 0.5s 1.8s ease-out forwards;
 }
 
@@ -270,9 +270,9 @@
 }
 
 /* Pattern detection - related lines pulse together */
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(1),
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(2),
-.lb-grid .lb-card:first-child:hover .code-line-first:nth-child(5) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(1),
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(2),
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-line-first:nth-child(5) {
   animation: lb-line-scan-glow 0.5s ease-out forwards,
              lb-pattern-recognition 0.7s 1.2s ease-in-out forwards;
 }
@@ -292,7 +292,7 @@
   position: relative;
 }
 
-.lb-grid .lb-card:first-child:hover .gap-line {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .gap-line {
   animation: lb-gap-pulse 1.0s 1.5s ease-in-out forwards;
 }
 
@@ -317,7 +317,7 @@
   z-index: 10;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-cursor-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-cursor-first {
   animation: lb-cursor-hover 0.8s 1.8s ease-in-out forwards;
 }
 
@@ -351,29 +351,29 @@
 }
 
 /* Suggestion line types in */
-.lb-grid .lb-card:first-child:hover .suggestion-line {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line {
   animation: lb-suggestion-appear 0.3s 2.6s ease-out forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-line .kw-first:nth-of-type(1),
-.lb-grid .lb-card:first-child:hover .suggestion-line .kw-first:nth-of-type(2) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line .kw-first:nth-of-type(1),
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line .kw-first:nth-of-type(2) {
   animation: lb-type-in 0.15s 2.7s steps(3) forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-line .var-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line .var-first {
   animation: lb-type-in 0.2s 2.85s steps(4) forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-line .fn-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line .fn-first {
   animation: lb-type-in 0.15s 3.05s steps(2) forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-line .kw-first:nth-of-type(3),
-.lb-grid .lb-card:first-child:hover .suggestion-line .kw-first:nth-of-type(4) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line .kw-first:nth-of-type(3),
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line .kw-first:nth-of-type(4) {
   animation: lb-type-in 0.2s 3.2s steps(4) forwards;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-line .str-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-line .str-first {
   animation: lb-type-in 0.25s 3.4s steps(6) forwards;
 }
 
@@ -407,7 +407,7 @@
   z-index: 10;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-icon-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-icon-first {
   animation: lb-puzzle-flash 1.0s 3.5s ease-out forwards;
 }
 
@@ -481,7 +481,7 @@
   pointer-events: none;
 }
 
-.lb-grid .lb-card:first-child:hover .suggestion-piece::after {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .suggestion-piece::after {
   animation: lb-outline-dissolve 0.8s 1.9s ease-out forwards;
 }
 
@@ -504,7 +504,7 @@
 }
 
 /* System stabilization - code aligns neatly */
-.lb-grid .lb-card:first-child:hover .code-editor-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .code-editor-first {
   animation: lb-code-stabilize 0.6s 4.0s ease-out forwards;
 }
 
@@ -541,7 +541,7 @@
   pointer-events: none;
 }
 
-.lb-grid .lb-card:first-child:hover .lb-card-placeholder::before {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .lb-card-placeholder::before {
   animation: lb-completion-ripple 1.0s 4.2s ease-out forwards;
 }
 
@@ -561,41 +561,41 @@
 }
 
 /* System stabilization - blocks align after piece snaps in */
-.lb-grid .lb-card:first-child:hover .block:not(.gap) {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:not(.gap) {
   animation: 
     lb-network-scan 0.6s ease-out forwards,
     lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
 
 /* Re-add delays for blocks during stabilization */
-.lb-grid .lb-card:first-child:hover .block:nth-child(1) { 
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:nth-child(1) { 
   animation: lb-network-scan 0.6s 0.05s ease-out forwards,
              lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
-.lb-grid .lb-card:first-child:hover .block:nth-child(2) { 
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:nth-child(2) { 
   animation: lb-network-scan 0.6s 0.15s ease-out forwards,
              lb-pattern-glow 0.8s 0.9s ease-in-out forwards,
              lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
-.lb-grid .lb-card:first-child:hover .block:nth-child(3) { 
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:nth-child(3) { 
   animation: lb-network-scan 0.6s 0.25s ease-out forwards,
              lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
-.lb-grid .lb-card:first-child:hover .block:nth-child(4) { 
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:nth-child(4) { 
   animation: lb-network-scan 0.6s 0.35s ease-out forwards,
              lb-pattern-glow 0.8s 0.9s ease-in-out forwards,
              lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
-.lb-grid .lb-card:first-child:hover .block:nth-child(5) { 
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:nth-child(5) { 
   animation: lb-network-scan 0.6s 0.45s ease-out forwards,
              lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
-.lb-grid .lb-card:first-child:hover .block:nth-child(6) { 
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:nth-child(6) { 
   animation: lb-network-scan 0.6s 0.55s ease-out forwards,
              lb-pattern-glow 0.8s 0.9s ease-in-out forwards,
              lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
-.lb-grid .lb-card:first-child:hover .block:nth-child(8) { 
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .block:nth-child(8) { 
   animation: lb-network-scan 0.6s 0.65s ease-out forwards,
              lb-block-align 0.5s 2.5s cubic-bezier(0.34, 0, 0.2, 1) forwards;
 }
@@ -633,7 +633,7 @@
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.lb-grid .lb-card:first-child:hover .ai-cue-first {
+.lb-grid .lb-card:first-child:is(:hover, .lb-card-auto-active) .ai-cue-first {
   animation: 
     lb-ai-cue-pop 0.6s 4.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
     lb-ai-cue-pulse 1.2s 5.4s ease-in-out forwards;
@@ -762,19 +762,19 @@
 }
 
 /* Sequential code highlighting on hover */
-.lb-grid .lb-card:nth-child(2):hover .code-line:nth-child(1) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .code-line:nth-child(1) {
   animation: lb-code-highlight-sync 0.6s 0.2s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .code-line:nth-child(2) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .code-line:nth-child(2) {
   animation: lb-code-highlight-sync 0.6s 0.9s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .code-line:nth-child(3) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .code-line:nth-child(3) {
   animation: lb-code-highlight-sync 0.6s 1.6s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .code-line:nth-child(4) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .code-line:nth-child(4) {
   animation: lb-code-highlight-sync 0.6s 2.3s ease-out forwards;
 }
 
@@ -822,19 +822,19 @@
 .lb-grid .lb-card:nth-child(2) .sync-line-3 { top: 66px; }
 .lb-grid .lb-card:nth-child(2) .sync-line-4 { top: 92px; }
 
-.lb-grid .lb-card:nth-child(2):hover .sync-line-1 {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .sync-line-1 {
   animation: lb-sync-pulse 0.8s 0.2s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .sync-line-2 {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .sync-line-2 {
   animation: lb-sync-pulse 0.8s 0.9s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .sync-line-3 {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .sync-line-3 {
   animation: lb-sync-pulse 0.8s 1.6s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .sync-line-4 {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .sync-line-4 {
   animation: lb-sync-pulse 0.8s 2.3s ease-out forwards;
 }
 
@@ -900,11 +900,11 @@
   opacity: 0;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .doc-header {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-header {
   animation: lb-typing-header 0.8s 0.2s steps(25) forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .doc-header::before {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-header::before {
   animation: lb-cursor-blink 0.5s 0.2s step-end infinite;
 }
 
@@ -935,16 +935,20 @@
 }
 
 /* Typing effect for each doc line */
-.lb-grid .lb-card:nth-child(2):hover .doc-line:nth-child(2) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-line:nth-child(2) {
   animation: lb-doc-type-in 0.5s 1.0s steps(15) forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .doc-line:nth-child(3) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-line:nth-child(3) {
   animation: lb-doc-type-in 0.5s 1.7s steps(20) forwards;
 }
 
-.lb-grid .lb-card:nth-child(2):hover .doc-line:nth-child(4) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-line:nth-child(4) {
   animation: lb-doc-type-in 0.5s 2.4s steps(18) forwards;
+}
+
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-line:nth-child(5) {
+  animation: lb-doc-type-in 0.5s 3.1s steps(16) forwards;
 }
 
 @keyframes lb-doc-type-in {
@@ -957,7 +961,7 @@
 }
 
 /* Update moment - code change triggers doc flash */
-.lb-grid .lb-card:nth-child(2):hover .code-line:nth-child(5) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .code-line:nth-child(5) {
   animation: lb-code-edit-change 0.8s 3.2s ease-out forwards;
 }
 
@@ -980,7 +984,7 @@
 }
 
 /* Corresponding doc line update flash */
-.lb-grid .lb-card:nth-child(2):hover .doc-line:nth-child(5) {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-line:nth-child(5) {
   animation: 
     lb-doc-type-in 0.5s 3.1s steps(20) forwards,
     lb-doc-update-flash 0.8s 3.2s ease-out forwards;
@@ -1021,7 +1025,7 @@
   box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
 }
 
-.lb-grid .lb-card:nth-child(2):hover .doc-check {
+.lb-grid .lb-card:nth-child(2):is(:hover, .lb-card-auto-active) .doc-check {
   animation: 
     lb-check-appear 0.5s 4.0s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
     lb-check-single-pulse 0.6s 4.5s ease-out forwards;
@@ -1135,7 +1139,7 @@
   box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
 }
 
-.lb-grid .lb-card:nth-child(3):hover .scan-bar-debug {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .scan-bar-debug {
   animation: lb-scan-slide 2.5s ease-in-out forwards;
 }
 
@@ -1157,19 +1161,19 @@
 }
 
 /* Code lines get highlighted as scan passes */
-.lb-grid .lb-card:nth-child(3):hover .code-line-debug:nth-child(1) {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .code-line-debug:nth-child(1) {
   animation: lb-scan-touch 0.4s 0.3s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .code-line-debug:nth-child(2) {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .code-line-debug:nth-child(2) {
   animation: lb-scan-touch 0.4s 0.8s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .code-line-debug:nth-child(3) {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .code-line-debug:nth-child(3) {
   animation: lb-scan-touch 0.4s 1.3s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .code-line-debug:nth-child(4) {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .code-line-debug:nth-child(4) {
   animation: lb-scan-touch 0.4s 1.8s ease-out forwards;
 }
 
@@ -1207,7 +1211,7 @@
   opacity: 0;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .code-line-debug.error-line::after {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .code-line-debug.error-line::after {
   animation: lb-error-underline 0.5s 2.0s ease-out forwards,
              lb-error-pulse-line 1.0s 2.2s ease-in-out infinite;
 }
@@ -1232,7 +1236,7 @@
   z-index: 10;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .warning-icon {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .warning-icon {
   animation: lb-warning-show 0.4s 2.2s ease-out forwards,
              lb-warning-fade 0.4s 3.2s ease-out forwards;
 }
@@ -1254,7 +1258,7 @@
 }
 
 /* Fix transition - red to green */
-.lb-grid .lb-card:nth-child(3):hover .code-line-debug.error-line {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .code-line-debug.error-line {
   animation: lb-fix-line 1.2s 3.2s ease-out forwards;
 }
 
@@ -1270,7 +1274,7 @@
   }
 }
 
-.lb-grid .lb-card:nth-child(3):hover .code-line-debug.error-line::after {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .code-line-debug.error-line::after {
   animation: 
     lb-error-underline 0.5s 2.0s ease-out forwards,
     lb-error-pulse-line 1.0s 2.2s ease-in-out 1,
@@ -1302,7 +1306,7 @@
   z-index: 10;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .check-icon {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .check-icon {
   animation: lb-check-show 0.5s 3.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -1330,7 +1334,7 @@
   z-index: 4;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .editor-ripple {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .editor-ripple {
   animation: lb-editor-ripple 1.0s 4.0s ease-out forwards;
 }
 
@@ -1369,7 +1373,7 @@
   z-index: 10;
 }
 
-.lb-grid .lb-card:nth-child(3):hover .debug-complete-icon {
+.lb-grid .lb-card:nth-child(3):is(:hover, .lb-card-auto-active) .debug-complete-icon {
   animation: 
     lb-complete-icon-appear 0.5s 4.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
     lb-complete-icon-pulse 0.8s 5.0s ease-out forwards;
@@ -1461,7 +1465,7 @@
   box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
 }
 
-.lb-grid .lb-card:nth-child(4):hover .scan-bar {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .scan-bar {
   animation: lb-review-scan 2.5s ease-in-out forwards;
 }
 
@@ -1483,23 +1487,23 @@
 }
 
 /* Code glow as scan passes */
-.lb-grid .lb-card:nth-child(4):hover .review-code-line:nth-child(1) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-code-line:nth-child(1) {
   animation: lb-code-analyzed 0.4s 0.2s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-code-line:nth-child(2) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-code-line:nth-child(2) {
   animation: lb-code-analyzed 0.4s 0.6s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-code-line:nth-child(3) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-code-line:nth-child(3) {
   animation: lb-code-analyzed 0.4s 1.0s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-code-line:nth-child(4) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-code-line:nth-child(4) {
   animation: lb-code-analyzed 0.4s 1.4s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-code-line:nth-child(5) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-code-line:nth-child(5) {
   animation: lb-code-analyzed 0.4s 1.8s ease-out forwards;
 }
 
@@ -1538,7 +1542,7 @@
   opacity: 0;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-code-line.problem::after {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-code-line.problem::after {
   animation: lb-underline-appear 0.3s 1.5s ease-out forwards;
 }
 
@@ -1577,7 +1581,7 @@
   border-right: 4px solid #2563EB;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .tooltip {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .tooltip {
   animation: lb-tooltip-pop 0.4s 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -1627,19 +1631,19 @@
 }
 
 /* Review items appear sequentially */
-.lb-grid .lb-card:nth-child(4):hover .review-item:nth-child(1) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item:nth-child(1) {
   animation: lb-review-item-appear 0.4s 0.4s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-item:nth-child(2) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item:nth-child(2) {
   animation: lb-review-item-appear 0.4s 0.9s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-item:nth-child(3) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item:nth-child(3) {
   animation: lb-review-item-appear 0.4s 1.4s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-item:nth-child(4) {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item:nth-child(4) {
   animation: lb-review-item-appear 0.4s 1.9s ease-out forwards;
 }
 
@@ -1661,15 +1665,15 @@
   color: #94a3b8;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-item.success {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item.success {
   animation: lb-review-success 0.4s ease-out forwards;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-item:nth-child(1).success {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item:nth-child(1).success {
   animation-delay: 0.4s;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-item:nth-child(2).success {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item:nth-child(2).success {
   animation-delay: 0.9s;
 }
 
@@ -1691,7 +1695,7 @@
   color: #94a3b8;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-item.warning {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-item.warning {
   animation: lb-review-warning 0.4s 1.4s ease-out forwards;
 }
 
@@ -1730,7 +1734,7 @@
   z-index: 10;
 }
 
-.lb-grid .lb-card:nth-child(4):hover .review-shield {
+.lb-grid .lb-card:nth-child(4):is(:hover, .lb-card-auto-active) .review-shield {
   animation: 
     lb-shield-appear 0.5s 2.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
     lb-shield-glow 0.8s 3.0s ease-out forwards;
@@ -1774,6 +1778,66 @@
 @media (max-width: 900px) {
   .lb-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-builder {
+    padding: 60px 20px;
+  }
+
+  .lb-header {
+    margin-bottom: 36px;
+  }
+
+  .lb-title {
+    font-size: 28px;
+  }
+
+  .lb-subtitle {
+    font-size: 16px;
+  }
+
+  .lb-grid {
+    gap: 20px;
+  }
+
+  .lb-card {
+    padding: 18px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .lb-card-placeholder {
+    min-height: 200px;
+  }
+
+  .lb-grid-mobile-active .lb-card {
+    pointer-events: none;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-builder {
+    padding: 48px 16px;
+  }
+
+  .lb-title {
+    font-size: 24px;
+  }
+
+  .lb-subtitle {
+    font-size: 15px;
+  }
+
+  .lb-card {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .lb-card-placeholder {
+    min-height: 220px;
   }
 }
 

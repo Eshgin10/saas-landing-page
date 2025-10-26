@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import './Testimonials.css'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
@@ -17,7 +18,28 @@ const TestimonialCard = ({ quote, author, role, avatar }) => {
 }
 
 const Testimonials = () => {
-  const [sectionRef, isVisible] = useIntersectionObserver()
+  const [isSmallScreen, setIsSmallScreen] = useState(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return false
+    return window.matchMedia('(max-width: 768px)').matches
+  })
+  const [sectionRef, isVisible] = useIntersectionObserver({ trackOnce: !isSmallScreen })
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    const handleChange = event => setIsSmallScreen(event.matches)
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange)
+      return () => mediaQuery.removeEventListener('change', handleChange)
+    }
+
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
+  }, [])
 
   const rowA = [
     { quote: 'Cut our PR review time by 60%.', author: 'Maya Chen', role: 'Staff Engineer, Orbit', avatar: 'https://i.pravatar.cc/80?img=1' },

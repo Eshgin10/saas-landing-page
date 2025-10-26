@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import './Benefits.css'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
@@ -14,7 +15,28 @@ const BenefitCard = ({ icon, title, description, svgIcon }) => {
 }
 
 const Benefits = () => {
-  const [sectionRef, isVisible] = useIntersectionObserver()
+  const [isSmallScreen, setIsSmallScreen] = useState(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return false
+    return window.matchMedia('(max-width: 768px)').matches
+  })
+  const [sectionRef, isVisible] = useIntersectionObserver({ trackOnce: !isSmallScreen })
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    const handleChange = event => setIsSmallScreen(event.matches)
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange)
+      return () => mediaQuery.removeEventListener('change', handleChange)
+    }
+
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
+  }, [])
 
   return (
     <section 

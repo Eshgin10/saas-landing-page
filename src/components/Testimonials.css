@@ -1,3 +1,4 @@
+/* Base layout */
 .t-section {
   padding: 80px 24px;
   background: #f9fafb;
@@ -108,8 +109,43 @@
 .t-marquee:hover .t-track { animation-play-state: paused; }
 
 @media (max-width: 640px) {
+  .t-section {
+    padding: 60px 20px;
+  }
+
   .t-card { 
-    width: 280px;
+    width: 260px;
+  }
+
+  .t-title {
+    font-size: 28px;
+  }
+
+  .t-subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .t-section {
+    padding: 48px 16px;
+  }
+
+  .t-track {
+    gap: 12px;
+  }
+
+  .t-card {
+    width: 220px;
+    padding: 18px;
+  }
+
+  .t-quote {
+    font-size: 15px;
+  }
+
+  .t-role {
+    font-size: 13px;
   }
 }
 

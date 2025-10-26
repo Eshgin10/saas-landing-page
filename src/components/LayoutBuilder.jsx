@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react'
 import './LayoutBuilder.css'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
-const FeatureCard = ({ title, description, isFirst, isSecond, isThird, isFourth }) => {
+const FeatureCard = ({ title, description, isFirst, isSecond, isThird, isFourth, shouldAutoAnimate }) => {
   return (
-    <div className="lb-card">
+    <div className={`lb-card ${shouldAutoAnimate ? 'lb-card-auto-active' : ''}`}>
       <h3 className="lb-card-title">{title}</h3>
       <p className="lb-card-desc">{description}</p>
       <div className="lb-card-placeholder" aria-hidden="true">
@@ -136,7 +137,32 @@ const FeatureCard = ({ title, description, isFirst, isSecond, isThird, isFourth 
 }
 
 const LayoutBuilder = () => {
-  const [sectionRef, isVisible] = useIntersectionObserver()
+  const [isSmallScreen, setIsSmallScreen] = useState(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return false
+    return window.matchMedia('(max-width: 768px)').matches
+  })
+  const [sectionRef, isVisible] = useIntersectionObserver({ trackOnce: !isSmallScreen })
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    const handleChange = event => setIsSmallScreen(event.matches)
+
+    handleChange(mediaQuery)
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange)
+      return () => mediaQuery.removeEventListener('change', handleChange)
+    }
+
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
+  }, [])
+
+  const shouldAutoAnimate = isSmallScreen && isVisible
 
   return (
     <section 
@@ -150,26 +176,30 @@ const LayoutBuilder = () => {
           <p className="lb-subtitle">How we keep you in flow while coding</p>
         </header>
 
-        <div className={`lb-grid ${isVisible ? 'cards-visible' : ''}`}>
+        <div className={`lb-grid ${isVisible ? 'cards-visible' : ''} ${shouldAutoAnimate ? 'lb-grid-mobile-active' : ''}`}>
           <FeatureCard
             title="Contextual Code Suggestions"
             description="Understand your project's architecture and coding patterns, not just generic snippets."
             isFirst
+            shouldAutoAnimate={shouldAutoAnimate}
           />
           <FeatureCard
             title="Automated Documentation"
             description="Documentation that actually stays up-to-date as you code."
             isSecond
+            shouldAutoAnimate={shouldAutoAnimate}
           />
           <FeatureCard
             title="Intelligent Debugging"
             description="Trace issues across your entire stack with AI-powered analysis."
             isThird
+            shouldAutoAnimate={shouldAutoAnimate}
           />
           <FeatureCard
             title="Code Review Automation"
             description="Automated reviews that learn your team's standards and best practices."
             isFourth
+            shouldAutoAnimate={shouldAutoAnimate}
           />
         </div>
       </div>
@@ -178,6 +208,3 @@ const LayoutBuilder = () => {
 }
 
 export default LayoutBuilder
-
-
-
